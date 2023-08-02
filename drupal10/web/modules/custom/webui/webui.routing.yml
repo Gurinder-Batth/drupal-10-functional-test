@@ -1,5 +1,5 @@
 webui.home:
-  path: "/web-ui/home"
+  path: "/web-ui/students/{type}"
   defaults:
     _controller: '\Drupal\webui\Controller\WebUIController::home'
     _title: "Home"

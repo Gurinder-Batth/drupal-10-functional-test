@@ -14,7 +14,7 @@ use weitzman\DrupalTestTraits\ExistingSiteBase;
 abstract class WebUIBase extends ExistingSiteBase {
 
   use ConfigTestTrait;
-  protected function setUp()  {
+  protected function setUp() : void {
     parent::setUp();
   }
 

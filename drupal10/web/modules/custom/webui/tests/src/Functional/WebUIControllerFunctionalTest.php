@@ -13,18 +13,34 @@ use Drupal\Tests\webui\Functional\WebUIBase;
 class WebUIControllerFunctionalTest extends WebUIBase {
 
 
-  protected function setUp() {
+  protected function setUp()  : void {
     parent::setUp();
   }
 
   public function testSomething() {
     $this->assertEquals(TRUE, TRUE);
-    // $this->markTestSkipped("skip");
   }
 
   public function testHome() {
-    $test =  $this->drupalGet("/web-ui/home");
-    dd($test);
+
+    // Checking pass assertion.
+    $type = "pass";
+    $response = $this->drupalGet("/web-ui/students/". $type);
+    $data = json_decode($response, TRUE);
+    foreach ($data['students'] as $student) {
+      // assert checking
+      $this->assertGreaterThanOrEqual(50, $student['marks']);
+    }
+
+    // Checking failed assertion.
+    $type = "failed";
+    $response = $this->drupalGet("/web-ui/students/". $type);
+    $data = json_decode($response, TRUE);
+    foreach ($data['students'] as $student) {
+      // assert checking
+      $this->assertLessThan(50, $student['marks']);
+    }
+
   }
 
 }

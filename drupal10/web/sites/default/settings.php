@@ -866,7 +866,7 @@ if ($_SERVER['HTTP_USER_AGENT'] !== 'Drupal command line') {
 
   $databases['default']['default'] = array (
     'database' => 'drupal10',
-    'username' => 'user',
+    'username' => 'root',
     'password' => 'password',
     'prefix' => '',
     'host' => 'drupal10db',

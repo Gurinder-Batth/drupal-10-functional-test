@@ -24,24 +24,24 @@
 
   <testsuites>
     <testsuite name="custom">
-      <directory>./docroot/modules/custom</directory>
-      <directory>./docroot/modules/contrib/ipc_registration</directory>
-      <directory>./docroot/modules/contrib/ipcsync</directory>
+      <directory>./modules/custom</directory>
+      <directory>./modules/contrib/ipc_registration</directory>
+      <directory>./modules/contrib/ipcsync</directory>
     </testsuite>
 <!--    <testsuite name="unit">-->
-<!--      <file>./docroot/core/tests/TestSuites/UnitTestSuite.php</file>-->
+<!--      <file>./core/tests/TestSuites/UnitTestSuite.php</file>-->
 <!--    </testsuite>-->
 <!--    <testsuite name="kernel">-->
-<!--      <file>./docroot/tests/TestSuites/KernelTestSuite.php</file>-->
+<!--      <file>./tests/TestSuites/KernelTestSuite.php</file>-->
 <!--    </testsuite>-->
 <!--    <testsuite name="functional">-->
-<!--      <file>./docroot/tests/TestSuites/FunctionalTestSuite.php</file>-->
+<!--      <file>./tests/TestSuites/FunctionalTestSuite.php</file>-->
 <!--    </testsuite>-->
 <!--    <testsuite name="functional-javascript">-->
-<!--      <file>./docroot/tests/TestSuites/FunctionalJavascriptTestSuite.php</file>-->
+<!--      <file>./tests/TestSuites/FunctionalJavascriptTestSuite.php</file>-->
 <!--    </testsuite>-->
 <!--    <testsuite name="build">-->
-<!--      <file>./docroot/tests/TestSuites/BuildTestSuite.php</file>-->
+<!--      <file>./tests/TestSuites/BuildTestSuite.php</file>-->
 <!--    </testsuite>-->
   </testsuites>
   <listeners>
