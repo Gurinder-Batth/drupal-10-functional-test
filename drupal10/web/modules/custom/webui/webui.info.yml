@@ -1,0 +1,7 @@
+name: Web UI
+type: module
+description: Web UI Module for functional testing example
+package: Custom
+version: 1.0
+core_version_requirement: ^8 || ^9 || ^10
+dependencies:

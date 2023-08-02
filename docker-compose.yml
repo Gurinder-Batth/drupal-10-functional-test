@@ -1,0 +1,33 @@
+version: "3.8"
+services:
+  drupal10server:
+    build:
+      context: ./docker/php
+    image: "drupal10-image-10"
+    restart: unless-stopped
+    ports:
+      - 1234:80 #drupal10
+      - 1235:8081 #phpMyAdmin
+    volumes:
+      - ./drupal10:/var/www/html/drupal10
+      - ./docker/apache/default.conf:/etc/apache2/sites-enabled/000-default.conf
+      - ./docker/apache/ports.conf:/etc/apache2/ports.conf
+      - ./phpMyAdmin/bash.sh:/var/www/phpMyAdmin/bash/bash.sh
+      - ./phpMyAdmin/config.inc.php:/var/www/phpMyAdmin/src/config.inc.php
+    environment:
+      - DTT_BASE_URL=http://127.0.0.1
+      - DTT_API_URL=sqlite://127.0.0.1/sites/default/files/db.sqlite
+      - BROWSERTEST_OUTPUT_DIRECTORY=/var/www/html/drupal10/web/sites/simpletest/browser_output
+
+  drupal10db:
+    image: mysql
+    restart: unless-stopped
+    ports:
+      - "4306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: "password"
+      MYSQL_DATABASE: "drupal10"
+      MYSQL_USER: "user"
+      MYSQL_PASSWORD: "password"
+    volumes:
+      - ./docker/dbdrupal10vol:/var/lib/mysql

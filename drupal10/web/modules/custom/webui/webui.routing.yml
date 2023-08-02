@@ -1,0 +1,7 @@
+webui.home:
+  path: "/web-ui/home"
+  defaults:
+    _controller: '\Drupal\webui\Controller\WebUIController::home'
+    _title: "Home"
+  requirements:
+    _permission: "access content"
