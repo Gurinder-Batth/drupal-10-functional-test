@@ -28,7 +28,7 @@ class WebUIControllerFunctionalTest extends WebUIBase {
     $response = $this->drupalGet("/web-ui/students/". $type);
     $data = json_decode($response, TRUE);
     foreach ($data['students'] as $student) {
-      // assert checking
+      // assert checking for fail students.
       $this->assertGreaterThanOrEqual(50, $student['marks']);
     }
 
@@ -37,7 +37,7 @@ class WebUIControllerFunctionalTest extends WebUIBase {
     $response = $this->drupalGet("/web-ui/students/". $type);
     $data = json_decode($response, TRUE);
     foreach ($data['students'] as $student) {
-      // assert checking
+      // assert checking for fail students.
       $this->assertLessThan(50, $student['marks']);
     }
 

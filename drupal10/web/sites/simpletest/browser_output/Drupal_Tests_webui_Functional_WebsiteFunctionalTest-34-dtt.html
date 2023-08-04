@@ -1,0 +1,231 @@
+<hr />ID #34 (<a href="Drupal_Tests_webui_Functional_WebsiteFunctionalTest-33-dtt.html">Previous</a> | <a href="Drupal_Tests_webui_Functional_WebsiteFunctionalTest-35-dtt.html">Next</a>)<hr />Called from GuzzleHttp\Promise\FulfilledPromise::GuzzleHttp\Promise\{closure}() line 48<hr />GET request to: http://127.0.0.1/admin<hr /><!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+<meta name="Generator" content="Drupal 10 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script type="text/javascript" data-toolbar-anti-flicker-loading>(function() {
+  const toolbarState = sessionStorage.getItem('Drupal.toolbar.toolbarState')
+    ? JSON.parse(sessionStorage.getItem('Drupal.toolbar.toolbarState'))
+    : false;
+  // These are classes that toolbar typically adds to <body>, but this code
+  // executes before the first paint, when <body> is not yet present. The
+  // classes are added to <html> so styling immediately reflects the current
+  // toolbar state. The classes are removed after the toolbar completes
+  // initialization.
+  const classesToAdd = ['toolbar-loading', 'toolbar-anti-flicker'];
+  if (toolbarState) {
+    const {
+      orientation,
+      hasActiveTab,
+      isFixed,
+      activeTray,
+      activeTabId,
+      isOriented,
+      userButtonMinWidth
+    } = toolbarState;
+
+    classesToAdd.push(
+      orientation ? `toolbar-` + orientation + `` : 'toolbar-horizontal',
+    );
+    if (hasActiveTab !== false) {
+      classesToAdd.push('toolbar-tray-open');
+    }
+    if (isFixed) {
+      classesToAdd.push('toolbar-fixed');
+    }
+    if (isOriented) {
+      classesToAdd.push('toolbar-oriented');
+    }
+
+    if (activeTray) {
+      // These styles are added so the active tab/tray styles are present
+      // immediately instead of "flickering" on as the toolbar initializes. In
+      // instances where a tray is lazy loaded, these styles facilitate the
+      // lazy loaded tray appearing gracefully and without reflow.
+      const styleContent = `
+      .toolbar-loading #` + activeTabId + ` {
+        background-image: linear-gradient(rgba(255, 255, 255, 0.25) 20%, transparent 200%);
+      }
+      .toolbar-loading #` + activeTabId + `-tray {
+        display: block; box-shadow: -1px 0 5px 2px rgb(0 0 0 / 33%);
+        border-right: 1px solid #aaa; background-color: #f5f5f5;
+        z-index: 0;
+      }
+      .toolbar-loading.toolbar-vertical.toolbar-tray-open #` + activeTabId + `-tray {
+        width: 15rem; height: 100vh;
+      }
+     .toolbar-loading.toolbar-horizontal :not(#` + activeTray + `) > .toolbar-lining {opacity: 0}`;
+
+      const style = document.createElement('style');
+      style.textContent = styleContent;
+      style.setAttribute('data-toolbar-anti-flicker-loading', true);
+      document.querySelector('head').appendChild(style);
+
+      if (userButtonMinWidth) {
+        const userButtonStyle = document.createElement('style');
+        userButtonStyle.textContent = `#toolbar-item-user {min-width: ` + userButtonMinWidth +`px;}`
+        document.querySelector('head').appendChild(userButtonStyle);
+      }
+    }
+  }
+  document.querySelector('html').classList.add(...classesToAdd);
+})();</script>
+<noscript><link rel="stylesheet" href="/core/themes/claro/css/components/dropbutton-noscript.css?rytwc6" />
+</noscript><link rel="icon" href="/core/misc/favicon.ico" type="image/vnd.microsoft.icon" />
+
+    <title>Administration | drupal10</title>
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_8zkq9HOLFK7V9hO4gqVOfuTDCyZxjOzBRn7yhWAU4w8.css?delta=0&amp;language=en-gb&amp;theme=claro&amp;include=eJxli1EOwyAIQC-k9Qw7CiIxbhQM2Cbb6dem9mPZF_B4D9UoidoK3D4UkME0VdYMHH28uUkNeDrFtg68AI62Uzz46-IqeGdTEdjjgOw_XTetRj7h8c6Qma6LFcrTw1DlDJbmDJuT3fm5Lw1V_rSFHKHTo6xNvoYjTno" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_mT-3BK8XHPcdmtX-QVFlKakeSpp_rWT5WQyZZiMPOZk.css?delta=1&amp;language=en-gb&amp;theme=claro&amp;include=eJxli1EOwyAIQC-k9Qw7CiIxbhQM2Cbb6dem9mPZF_B4D9UoidoK3D4UkME0VdYMHH28uUkNeDrFtg68AI62Uzz46-IqeGdTEdjjgOw_XTetRj7h8c6Qma6LFcrTw1DlDJbmDJuT3fm5Lw1V_rSFHKHTo6xNvoYjTno" />
+
+    <script src="/sites/default/files/js/js_KJwRQK_MzXT0zR9DIygsoh1sLRTG7Q6hijysHaD_dJY.js?scope=header&amp;delta=0&amp;language=en-gb&amp;theme=claro&amp;include=eJxli1EOwyAIQC-k9Qw7CiIxbhQM2Cbb6dem9mPZF_B4D9UoidoK3D4UkME0VdYMHH28uUkNeDrFtg68AI62Uzz46-IqeGdTEdjjgOw_XTetRj7h8c6Qma6LFcrTw1DlDJbmDJuT3fm5Lw1V_rSFHKHTo6xNvoYjTno"></script>
+
+  </head>
+  <body class="toolbar-loading user-logged-in path-admin">
+        <a href="#main-content" class="visually-hidden focusable skip-link">
+      Skip to main content
+    </a>
+    <div id="toolbar-administration" role="group" aria-label="Site administration toolbar" data-drupal-claro-processed-toolbar class="toolbar claro-toolbar">
+  <nav id="toolbar-bar" role="navigation" aria-label="Toolbar items" class="toolbar-bar clearfix">
+    <h2 class="visually-hidden">Toolbar items</h2>
+                <div class="home-toolbar-tab toolbar-tab">
+        <a href="/" title="Return to site content" class="toolbar-icon toolbar-icon-escape-admin toolbar-item" data-toolbar-escape-admin>Back to site</a>
+        <div><nav class="toolbar-lining clearfix" role="navigation"></nav></div>      </div>
+                <div class="toolbar-tab">
+        <a href="/admin" title="Admin menu" class="toolbar-icon toolbar-icon-menu trigger toolbar-item" data-drupal-subtrees="" id="toolbar-item-administration" data-toolbar-tray="toolbar-item-administration-tray" role="button" aria-pressed="false">Manage</a>
+        <div id="toolbar-item-administration-tray" data-toolbar-tray="toolbar-item-administration-tray" class="toolbar-tray"><nav class="toolbar-lining clearfix" role="navigation" aria-label="Administration menu"><h3 class="toolbar-tray-name visually-hidden">Administration menu</h3><div class="toolbar-menu-administration"><ul class="toolbar-menu claro-toolbar-menu"><li class="menu-item"><a href="/admin/content" title="Find and manage content." id="toolbar-link-system-admin_content" class="toolbar-icon toolbar-icon-system-admin-content" data-drupal-link-system-path="admin/content">Content</a></li><li class="menu-item menu-item--collapsed"><a href="/admin/structure" title="Administer blocks, content types, menus, etc." id="toolbar-link-system-admin_structure" class="toolbar-icon toolbar-icon-system-admin-structure" data-drupal-link-system-path="admin/structure">Structure</a></li><li class="menu-item"><a href="/admin/appearance" title="Select and configure themes." id="toolbar-link-system-themes_page" class="toolbar-icon toolbar-icon-system-themes-page" data-drupal-link-system-path="admin/appearance">Appearance</a></li><li class="menu-item"><a href="/admin/modules" title="Add and enable modules to extend site functionality." id="toolbar-link-system-modules_list" class="toolbar-icon toolbar-icon-system-modules-list" data-drupal-link-system-path="admin/modules">Extend</a></li><li class="menu-item menu-item--collapsed"><a href="/admin/config" title="Administer settings." id="toolbar-link-system-admin_config" class="toolbar-icon toolbar-icon-system-admin-config" data-drupal-link-system-path="admin/config">Configuration</a></li><li class="menu-item"><a href="/admin/people" title="Manage user accounts, roles, and permissions." id="toolbar-link-entity-user-collection" class="toolbar-icon toolbar-icon-entity-user-collection" data-drupal-link-system-path="admin/people">People</a></li><li class="menu-item menu-item--collapsed"><a href="/admin/reports" title="View reports, updates, and errors." id="toolbar-link-system-admin_reports" class="toolbar-icon toolbar-icon-system-admin-reports" data-drupal-link-system-path="admin/reports">Reports</a></li></ul></div></nav></div>      </div>
+                <div class="toolbar-tab">
+        <a href="/user" title="My account" class="toolbar-icon toolbar-icon-user trigger toolbar-item" id="toolbar-item-user" data-toolbar-tray="toolbar-item-user-tray" role="button" aria-pressed="false">user_name1691121790</a>
+        <div id="toolbar-item-user-tray" data-toolbar-tray="toolbar-item-user-tray" class="toolbar-tray"><nav class="toolbar-lining clearfix" role="navigation" aria-label="User account actions"><h3 class="toolbar-tray-name visually-hidden">User account actions</h3><ul class="toolbar-menu"><li class="account"><a href="/user" title="User account">View profile</a></li><li class="account-edit"><a href="/user/15/edit" title="Edit user account">Edit profile</a></li><li class="logout"><a href="/user/logout">Log out</a></li></ul></nav></div>      </div>
+      </nav>
+  
+</div>
+
+      <div class="page-wrapper dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+      <header class="content-header clearfix">
+    <div class="layout-container">
+      <div class="region region-breadcrumb">
+  <div id="block-claro-breadcrumbs" class="block block-system block-system-breadcrumb-block">
+  
+    
+        <nav class="breadcrumb" role="navigation" aria-labelledby="system-breadcrumb">
+    <h2 id="system-breadcrumb" class="visually-hidden">Breadcrumb</h2>
+    <ol class="breadcrumb__list">
+          <li class="breadcrumb__item">
+                  <a href="/" class="breadcrumb__link">Home</a>
+              </li>
+        </ol>
+  </nav>
+
+  </div>
+
+</div>
+
+        <div class="region region-header">
+    <div id="block-claro-page-title" class="block block-core block-page-title-block">
+  
+    
+      
+  <h1 class="page-title">Administration</h1>
+
+
+  </div>
+<div id="block-claro-primary-local-tasks" class="block block-core block-local-tasks-block">
+  
+    
+          <h2 id="primary-tabs-title" class="visually-hidden">Primary tabs</h2>
+  <nav role="navigation" class="tabs-wrapper is-horizontal is-collapsible" aria-labelledby="primary-tabs-title" data-drupal-nav-tabs>
+    <ul class="tabs tabs--primary clearfix" data-drupal-nav-tabs-target><li class="tabs__tab js-tab is-active js-active-tab">
+  <a href="/admin" class="tabs__link js-tabs-link is-active" data-drupal-link-system-path="admin">Tasks<span class="visually-hidden">(active tab)</span></a>
+      <button class="reset-appearance tabs__trigger" aria-label="Tabs display toggle" data-drupal-nav-tabs-trigger>
+      <svg fill="none" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="m15 9h-14c-.56016 0-1-.43984-1-1s.43984-1 1-1h14c.5602 0 1 .43984 1 1s-.4398 1-1 1zm0-5h-14c-.56016 0-1-.43984-1-1s.43984-1 1-1h14c.5602 0 1 .43984 1 1s-.4398 1-1 1zm-14 8h14c.5602 0 1 .4398 1 1s-.4398 1-1 1h-14c-.56016 0-1-.4398-1-1s.43984-1 1-1z" fill="#003ECC" fill-rule="evenodd"/></svg>    </button>
+  </li>
+<li class="tabs__tab js-tab">
+  <a href="/admin/index" class="tabs__link js-tabs-link" data-drupal-link-system-path="admin/index">Index</a>
+  </li>
+</ul>
+  </nav>
+
+  </div>
+
+  </div>
+
+    </div>
+  </header>
+
+  <div class="layout-container">
+    
+    <main class="page-content clearfix" role="main">
+      <div class="visually-hidden"><a id="main-content" tabindex="-1"></a></div>
+        <div class="region region-highlighted">
+    <div data-drupal-messages-fallback class="hidden messages-list"></div>
+
+  </div>
+
+              <div class="region region-content">
+    <div id="block-claro-content" class="block block-system block-system-main-block">
+  
+    
+        <dl class="admin-list">
+          <div class="admin-item">
+        <dt class="admin-item__title"><a href="/admin/content" title="Find and manage content." class="admin-item__link">Content</a></dt>
+                  <dd class="admin-item__description">Find and manage content.</dd>
+              </div>
+          <div class="admin-item">
+        <dt class="admin-item__title"><a href="/admin/structure" title="Administer blocks, content types, menus, etc." class="admin-item__link">Structure</a></dt>
+                  <dd class="admin-item__description">Administer blocks, content types, menus, etc.</dd>
+              </div>
+          <div class="admin-item">
+        <dt class="admin-item__title"><a href="/admin/appearance" title="Select and configure themes." class="admin-item__link">Appearance</a></dt>
+                  <dd class="admin-item__description">Select and configure themes.</dd>
+              </div>
+          <div class="admin-item">
+        <dt class="admin-item__title"><a href="/admin/modules" title="Add and enable modules to extend site functionality." class="admin-item__link">Extend</a></dt>
+                  <dd class="admin-item__description">Add and enable modules to extend site functionality.</dd>
+              </div>
+          <div class="admin-item">
+        <dt class="admin-item__title"><a href="/admin/config" title="Administer settings." class="admin-item__link">Configuration</a></dt>
+                  <dd class="admin-item__description">Administer settings.</dd>
+              </div>
+          <div class="admin-item">
+        <dt class="admin-item__title"><a href="/admin/people" title="Manage user accounts, roles, and permissions." class="admin-item__link">People</a></dt>
+                  <dd class="admin-item__description">Manage user accounts, roles, and permissions.</dd>
+              </div>
+          <div class="admin-item">
+        <dt class="admin-item__title"><a href="/admin/reports" title="View reports, updates, and errors." class="admin-item__link">Reports</a></dt>
+                  <dd class="admin-item__description">View reports, updates, and errors.</dd>
+              </div>
+      </dl>
+
+  </div>
+
+  </div>
+
+    </main>
+
+  </div>
+
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"admin","currentPathIsAdmin":true,"isFront":false,"currentLanguage":"en-gb"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"ajaxPageState":{"libraries":"claro\/drupal.nav-tabs,claro\/global-styling,core\/drupal.active-link,core\/normalize,system\/admin,toolbar\/toolbar,toolbar\/toolbar.escapeAdmin,user\/drupal.user.icons","theme":"claro","theme_token":null},"ajaxTrustedUrl":[],"toolbar":{"breakpoints":{"toolbar.narrow":"only screen and (min-width: 16.5em)","toolbar.standard":"only screen and (min-width: 38.125em)","toolbar.wide":"only screen and (min-width: 61em)"},"subtreesHash":"L_XpubNh9xu01tsOZByKBlA0ArzPgGA0hHDd7777FTg"},"user":{"uid":"15","permissionsHash":"0728bdf5cfd3e73b0cc67e64c19387d3abec3080a529cb796964ff304e4a5aca"}}</script>
+<script src="/sites/default/files/js/js_xEdRPCslYVbWkkQeslCjMMHRCGZQvwSgjqnEO1UNrOU.js?scope=footer&amp;delta=0&amp;language=en-gb&amp;theme=claro&amp;include=eJxli1EOwyAIQC-k9Qw7CiIxbhQM2Cbb6dem9mPZF_B4D9UoidoK3D4UkME0VdYMHH28uUkNeDrFtg68AI62Uzz46-IqeGdTEdjjgOw_XTetRj7h8c6Qma6LFcrTw1DlDJbmDJuT3fm5Lw1V_rSFHKHTo6xNvoYjTno"></script>
+
+  </body>
+</html>
+<hr />Headers: <pre>array (
+  &#039;Date&#039; =&gt; &#039;Fri, 04 Aug 2023 04:03:12 GMT&#039;,
+  &#039;Server&#039; =&gt; &#039;Apache/2.4.38 (Debian)&#039;,
+  &#039;X-Powered-By&#039; =&gt; &#039;PHP/8.1.3&#039;,
+  &#039;Cache-Control&#039; =&gt; &#039;must-revalidate, no-cache, private&#039;,
+  &#039;Content-language&#039; =&gt; &#039;en-gb&#039;,
+  &#039;X-Content-Type-Options&#039; =&gt; &#039;nosniff&#039;,
+  &#039;X-Frame-Options&#039; =&gt; &#039;SAMEORIGIN&#039;,
+  &#039;Expires&#039; =&gt; &#039;Sun, 19 Nov 1978 05:00:00 GMT&#039;,
+  &#039;X-Generator&#039; =&gt; &#039;Drupal 10 (https://www.drupal.org)&#039;,
+  &#039;Vary&#039; =&gt; &#039;Accept-Encoding&#039;,
+  &#039;Transfer-Encoding&#039; =&gt; &#039;chunked&#039;,
+  &#039;Content-Type&#039; =&gt; &#039;text/html; charset=UTF-8&#039;,
+)</pre>

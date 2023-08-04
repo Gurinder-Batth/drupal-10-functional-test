@@ -19,7 +19,9 @@ class WebUIController extends ControllerBase {
    */
   public function home() {
     $type = \Drupal::request()->get("type", "pass");
+    // Filter the student based on the pass or fail.
     $query = \Drupal::entityQuery('node')->accessCheck(FALSE)->condition('type', 'students');
+    $type == "pass" ? $query->condition("field_marks", 50, ">=") : $query->condition("field_marks", 50, "<");
     $ids = $query->execute();
     $students = Node::loadMultiple($ids);
     $data = [];
@@ -29,8 +31,6 @@ class WebUIController extends ControllerBase {
         'marks' => (int) $student->field_marks->value,
        ];
     }
-    // Filter the student based on the pass or fail.
-    $data = array_filter($data, fn ($item) => $type == "pass" ? $item['marks'] >= 50 : $item['marks'] < 50);
     return new JsonResponse([ 'students' => array_values($data) ]);
   }
 

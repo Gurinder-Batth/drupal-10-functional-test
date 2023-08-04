@@ -1,0 +1,3 @@
+services:
+  webui.pizza:
+    class: Drupal\webui\PizzaService

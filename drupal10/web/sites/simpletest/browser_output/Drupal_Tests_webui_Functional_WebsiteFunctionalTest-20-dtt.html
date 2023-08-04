@@ -1,0 +1,170 @@
+<hr />ID #20 (<a href="Drupal_Tests_webui_Functional_WebsiteFunctionalTest-19-dtt.html">Previous</a> | <a href="Drupal_Tests_webui_Functional_WebsiteFunctionalTest-21-dtt.html">Next</a>)<hr />Called from GuzzleHttp\Promise\FulfilledPromise::GuzzleHttp\Promise\{closure}() line 48<hr />GET request to: http://127.0.0.1/admin<hr /><!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+<meta name="Generator" content="Drupal 10 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script type="text/javascript" data-toolbar-anti-flicker-loading>(function() {
+  const toolbarState = sessionStorage.getItem('Drupal.toolbar.toolbarState')
+    ? JSON.parse(sessionStorage.getItem('Drupal.toolbar.toolbarState'))
+    : false;
+  // These are classes that toolbar typically adds to <body>, but this code
+  // executes before the first paint, when <body> is not yet present. The
+  // classes are added to <html> so styling immediately reflects the current
+  // toolbar state. The classes are removed after the toolbar completes
+  // initialization.
+  const classesToAdd = ['toolbar-loading', 'toolbar-anti-flicker'];
+  if (toolbarState) {
+    const {
+      orientation,
+      hasActiveTab,
+      isFixed,
+      activeTray,
+      activeTabId,
+      isOriented,
+      userButtonMinWidth
+    } = toolbarState;
+
+    classesToAdd.push(
+      orientation ? `toolbar-` + orientation + `` : 'toolbar-horizontal',
+    );
+    if (hasActiveTab !== false) {
+      classesToAdd.push('toolbar-tray-open');
+    }
+    if (isFixed) {
+      classesToAdd.push('toolbar-fixed');
+    }
+    if (isOriented) {
+      classesToAdd.push('toolbar-oriented');
+    }
+
+    if (activeTray) {
+      // These styles are added so the active tab/tray styles are present
+      // immediately instead of "flickering" on as the toolbar initializes. In
+      // instances where a tray is lazy loaded, these styles facilitate the
+      // lazy loaded tray appearing gracefully and without reflow.
+      const styleContent = `
+      .toolbar-loading #` + activeTabId + ` {
+        background-image: linear-gradient(rgba(255, 255, 255, 0.25) 20%, transparent 200%);
+      }
+      .toolbar-loading #` + activeTabId + `-tray {
+        display: block; box-shadow: -1px 0 5px 2px rgb(0 0 0 / 33%);
+        border-right: 1px solid #aaa; background-color: #f5f5f5;
+        z-index: 0;
+      }
+      .toolbar-loading.toolbar-vertical.toolbar-tray-open #` + activeTabId + `-tray {
+        width: 15rem; height: 100vh;
+      }
+     .toolbar-loading.toolbar-horizontal :not(#` + activeTray + `) > .toolbar-lining {opacity: 0}`;
+
+      const style = document.createElement('style');
+      style.textContent = styleContent;
+      style.setAttribute('data-toolbar-anti-flicker-loading', true);
+      document.querySelector('head').appendChild(style);
+
+      if (userButtonMinWidth) {
+        const userButtonStyle = document.createElement('style');
+        userButtonStyle.textContent = `#toolbar-item-user {min-width: ` + userButtonMinWidth +`px;}`
+        document.querySelector('head').appendChild(userButtonStyle);
+      }
+    }
+  }
+  document.querySelector('html').classList.add(...classesToAdd);
+})();</script>
+<noscript><link rel="stylesheet" href="/core/themes/claro/css/components/dropbutton-noscript.css?rytwc6" />
+</noscript><link rel="icon" href="/core/misc/favicon.ico" type="image/vnd.microsoft.icon" />
+
+    <title>Access denied | drupal10</title>
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_kjtZzh9suJRSMVoGsCKj4oWsu558bn8p282YjAAVTJg.css?delta=0&amp;language=en-gb&amp;theme=claro&amp;include=eJwti1EOgCAMxS6EcqYHLAQzmG7wgafXBD7btDatU_UBRi6Kkk86bvBZyQx5uyZaweX9kaHiIzQ5WydSLW1l1zNI524ySwAf1ieXlj8LUier" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_vqcl1Bf-JW43QPkunfdS4Ezla77qUFdu7QzvSo60_xQ.css?delta=1&amp;language=en-gb&amp;theme=claro&amp;include=eJwti1EOgCAMxS6EcqYHLAQzmG7wgafXBD7btDatU_UBRi6Kkk86bvBZyQx5uyZaweX9kaHiIzQ5WydSLW1l1zNI524ySwAf1ieXlj8LUier" />
+
+    <script src="/sites/default/files/js/js_KJwRQK_MzXT0zR9DIygsoh1sLRTG7Q6hijysHaD_dJY.js?scope=header&amp;delta=0&amp;language=en-gb&amp;theme=claro&amp;include=eJwti1EOgCAMxS6EcqYHLAQzmG7wgafXBD7btDatU_UBRi6Kkk86bvBZyQx5uyZaweX9kaHiIzQ5WydSLW1l1zNI524ySwAf1ieXlj8LUier"></script>
+
+  </head>
+  <body class="path-admin">
+        <a href="#main-content" class="visually-hidden focusable skip-link">
+      Skip to main content
+    </a>
+    
+      <div class="page-wrapper dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+      <header class="content-header clearfix">
+    <div class="layout-container">
+      <div class="region region-breadcrumb">
+  <div id="block-claro-breadcrumbs" class="block block-system block-system-breadcrumb-block">
+  
+    
+        <nav class="breadcrumb" role="navigation" aria-labelledby="system-breadcrumb">
+    <h2 id="system-breadcrumb" class="visually-hidden">Breadcrumb</h2>
+    <ol class="breadcrumb__list">
+          <li class="breadcrumb__item">
+                  <a href="/" class="breadcrumb__link">Home</a>
+              </li>
+        </ol>
+  </nav>
+
+  </div>
+
+</div>
+
+        <div class="region region-header">
+    <div id="block-claro-page-title" class="block block-core block-page-title-block">
+  
+    
+      
+  <h1 class="page-title">Access denied</h1>
+
+
+  </div>
+
+  </div>
+
+    </div>
+  </header>
+
+  <div class="layout-container">
+    
+    <main class="page-content clearfix" role="main">
+      <div class="visually-hidden"><a id="main-content" tabindex="-1"></a></div>
+        <div class="region region-highlighted">
+    <div data-drupal-messages-fallback class="hidden messages-list"></div>
+
+  </div>
+
+              <div class="region region-content">
+    <div id="block-claro-content" class="block block-system block-system-main-block">
+  
+    
+      You are not authorised to access this page.
+  </div>
+
+  </div>
+
+    </main>
+
+  </div>
+
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"admin","currentPathIsAdmin":true,"isFront":false,"currentLanguage":"en-gb"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"user":{"uid":0,"permissionsHash":"26fbf389f585f1a97d6a4a701029c71f7b53d3bf5ad36cfbc5b84dd5827746c8"}}</script>
+<script src="/sites/default/files/js/js_gsFijGHxAEA0DSXtuy-HwewFWULd9lXeco1-fVAN0Hs.js?scope=footer&amp;delta=0&amp;language=en-gb&amp;theme=claro&amp;include=eJwti1EOgCAMxS6EcqYHLAQzmG7wgafXBD7btDatU_UBRi6Kkk86bvBZyQx5uyZaweX9kaHiIzQ5WydSLW1l1zNI524ySwAf1ieXlj8LUier"></script>
+
+  </body>
+</html>
+<hr />Headers: <pre>array (
+  &#039;Date&#039; =&gt; &#039;Fri, 04 Aug 2023 03:44:58 GMT&#039;,
+  &#039;Server&#039; =&gt; &#039;Apache/2.4.38 (Debian)&#039;,
+  &#039;X-Powered-By&#039; =&gt; &#039;PHP/8.1.3&#039;,
+  &#039;Cache-Control&#039; =&gt; &#039;must-revalidate, no-cache, private&#039;,
+  &#039;X-Drupal-Dynamic-Cache&#039; =&gt; &#039;HIT&#039;,
+  &#039;Content-language&#039; =&gt; &#039;en-gb&#039;,
+  &#039;X-Content-Type-Options&#039; =&gt; &#039;nosniff&#039;,
+  &#039;X-Frame-Options&#039; =&gt; &#039;SAMEORIGIN&#039;,
+  &#039;Expires&#039; =&gt; &#039;Sun, 19 Nov 1978 05:00:00 GMT&#039;,
+  &#039;X-Generator&#039; =&gt; &#039;Drupal 10 (https://www.drupal.org)&#039;,
+  &#039;X-Drupal-Cache&#039; =&gt; &#039;MISS&#039;,
+  &#039;Transfer-Encoding&#039; =&gt; &#039;chunked&#039;,
+  &#039;Content-Type&#039; =&gt; &#039;text/html; charset=UTF-8&#039;,
+)</pre>
